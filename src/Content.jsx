@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
+import './index.css'
 
 export default function Content() {
   const [listOfUrl, setListOfUrl] = useState([])
   const [lisOfname, setListOfName] = useState([])
-
 useEffect(() => {
   fetch('https://pokeapi.co/api/v2/pokemon/')
 .then(function (response) {
@@ -23,11 +23,13 @@ useEffect(() => {
      return response.json();
    }).then(function (response) {
     //console.log(response)
-    setListOfUrl(response.sprites)
+    listOfUrl.push(response.sprites.back_default)
+     
 console.log(listOfUrl)
    })
  )}
-},[lisOfname]);
+},[lisOfname, listOfUrl]);
+
 
 
 
@@ -37,11 +39,12 @@ console.log(listOfUrl)
   return (
       <div>
           <center>
-        {Object.entries(listOfUrl).map(([key,list],i) => (
-          <img src={list} key={i}  alt="" />
-        ))}
-          
-         
+             <div>
+              {listOfUrl.map((list, i) => 
+              <img src={list} key={i} alt="" />
+              )}
+             </div>
+       
               {lisOfname.map(name => 
                   <p key={name.name}>{name.name}</p>
                   )}
