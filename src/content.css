@@ -1,0 +1,16 @@
+img{
+    border: 1px solid black;
+     height: 150px;
+  }
+
+  .img-container{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-template-rows: repeat(auto-fit , minmax(10%, 200px));
+  }
+
+  .Header{
+    display: flex;
+    justify-content: space-between;
+  }
