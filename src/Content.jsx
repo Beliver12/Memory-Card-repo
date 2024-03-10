@@ -72,7 +72,7 @@ function handleClick() {
     <div>
       <div className='Header'>
         <h1>Memory-Card-Game</h1>
-        <h3>Get points by clicking on an image but don&apos;t click on any more than once!</h3>
+        <h3 className="description">Get points by clicking on an image but don&apos;t click on any more than once!</h3>
         <div className='ScoreBoard'>
           <h3>Score:{score}</h3>
           <h3>Best-Score:{bestScore}</h3>
