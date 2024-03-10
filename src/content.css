@@ -35,7 +35,10 @@ img{
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-template-rows: repeat(2, 200px );
     }
-
+    #root, body{
+      height: 2000px;
+    }
+    
   }
   @media only screen and (max-width: 1000px) {
 
